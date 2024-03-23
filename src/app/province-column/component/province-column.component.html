@@ -1,0 +1,12 @@
+<dx-text-box [value]="data?.value"
+             (onValueChanged)="onValueChanged($event)">
+  <dxi-button
+    location="after"
+    name="edit"
+    [options]="searchButton"
+  ></dxi-button>
+</dx-text-box>
+<province-selection
+[(visible)]="showPopup"
+(selectedValueChange)="onPopupSelection($event)"
+></province-selection>

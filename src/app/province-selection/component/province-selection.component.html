@@ -1,0 +1,14 @@
+<dx-popup
+  [hideOnOutsideClick]="false"
+  [dragOutsideBoundary]="false"
+  [visible] = "visible"
+  (onHidden)="onHide()">
+  <dx-select-box
+    [(value)]="selectedValue"
+    [dataSource]="list"
+    valueExpr="code"
+    displayExpr="descripcion"
+  ></dx-select-box>
+  <dx-button (onClick)="onAccept()">Accept</dx-button>
+  <dx-button (onClick)="onCancel()">Cancel</dx-button>
+</dx-popup>

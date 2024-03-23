@@ -1,0 +1,33 @@
+<div id="data-grid-demo">
+  <dx-data-grid
+    id="gridContainer"
+    [dataSource]="dataSource"
+    keyExpr="code"
+    [showBorders]="true"
+  >
+    <dxo-editing
+      mode="batch"
+      [allowUpdating]="true"
+      [allowAdding]="true"
+      [allowDeleting]="true"
+    >
+    </dxo-editing>
+
+    <dxi-column dataField="code"
+                caption="Código"
+                dataType="number"
+                [width]="200"
+                editCellTemplate="cellTemplate"
+                [showEditorAlways]="true"
+    >
+      <dxi-validation-rule type="required"></dxi-validation-rule>
+      <div *dxTemplate="let data of 'cellTemplate'">
+          <province-column [data]="data"></province-column>
+        </div
+      >
+    </dxi-column>
+    <dxi-column dataField="descripction" caption="Descripción" dataType="string"></dxi-column>
+
+  </dx-data-grid>
+
+</div>
