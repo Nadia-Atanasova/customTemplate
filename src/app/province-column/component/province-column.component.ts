@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {DxButtonModule, DxTextBoxModule} from "devextreme-angular";
-import {ProvinceSelectionComponent} from "../../province-selection/component/province-selection.component";
+import {ProvinceSearchComponent} from "../../province-search/component/province-search.component";
 import {DxButtonTypes} from "devextreme-angular/ui/button";
 
 @Component({
@@ -8,7 +8,7 @@ import {DxButtonTypes} from "devextreme-angular/ui/button";
   standalone: true,
   imports: [
     DxTextBoxModule,
-    ProvinceSelectionComponent,
+    ProvinceSearchComponent,
     DxButtonModule
   ],
   templateUrl: './province-column.component.html',
@@ -16,6 +16,7 @@ import {DxButtonTypes} from "devextreme-angular/ui/button";
 })
 export class ProvinceColumnComponent {
   @Input() data: any;
+  @Input() containerElement: any;
   showPopup: boolean = false;
 
   searchButton = {

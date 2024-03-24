@@ -6,7 +6,8 @@
     [options]="searchButton"
   ></dxi-button>
 </dx-text-box>
-<province-selection
+<province-search
 [(visible)]="showPopup"
 (selectedValueChange)="onPopupSelection($event)"
-></province-selection>
+[containerElement]="containerElement"
+></province-search>

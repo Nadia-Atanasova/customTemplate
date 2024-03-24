@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProvinceSelectionComponent } from './province-selection.component';
+import { ProvinceSearchComponent } from './province-search.component';
 
 describe('ProvinceSelectionComponent', () => {
-  let component: ProvinceSelectionComponent;
-  let fixture: ComponentFixture<ProvinceSelectionComponent>;
+  let component: ProvinceSearchComponent;
+  let fixture: ComponentFixture<ProvinceSearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProvinceSelectionComponent]
+      imports: [ProvinceSearchComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ProvinceSelectionComponent);
+
+    fixture = TestBed.createComponent(ProvinceSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

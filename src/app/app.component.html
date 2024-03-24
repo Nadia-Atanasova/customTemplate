@@ -22,12 +22,12 @@
     >
       <dxi-validation-rule type="required"></dxi-validation-rule>
       <div *dxTemplate="let data of 'cellTemplate'">
-          <province-column [data]="data"></province-column>
+          <province-column [data]="data" [containerElement]="containerElement"></province-column>
         </div
       >
     </dxi-column>
     <dxi-column dataField="descripction" caption="Descripción" dataType="string"></dxi-column>
 
   </dx-data-grid>
-
+  <div #containerElement></div>
 </div>
